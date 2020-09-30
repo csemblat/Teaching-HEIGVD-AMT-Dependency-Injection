@@ -5,5 +5,8 @@ public class Fish {
   public void eat() {
 
   }
+  public Fish(){
+
+  }
 
 }

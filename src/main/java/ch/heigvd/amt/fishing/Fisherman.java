@@ -12,13 +12,55 @@ public class Fisherman {
   private Bait bait;
   private Boat boat;
 
+  public Boots getBoots() {
+    return boots;
+  }
+
+  public void setBoots(Boots boots) {
+    this.boots = boots;
+  }
+
+  public FishingRod getFishingRod() {
+    return fishingRod;
+  }
+
+  public void setFishingRod(FishingRod fishingRod) {
+    this.fishingRod = fishingRod;
+  }
+
+  public Bait getBait() {
+    return bait;
+  }
+
+  public void setBait(Bait bait) {
+    this.bait = bait;
+  }
+
+  public Boat getBoat() {
+    return boat;
+  }
+
+  public void setBoat(Boat boat) {
+    this.boat = boat;
+  }
+
+  public Fisherman(){
+
+  }
+  public Fisherman(Boat boat, Boots boots, FishingRod fishingRod, Bait bait){
+    this.boat = boat;
+    this.boots = boots;
+    this.fishingRod = fishingRod;
+    this.bait = bait;
+  }
+
   public Fish goGetFish() {
-    boots.wear();
-    boat.putOnWater();
-    boat.startEngine();
-    bait.putOnHook();
-    fishingRod.moveUpTheAir();
-    Fish fish = fishingRod.pullOutOfWater();
+    getBoots().wear();
+    getBoat().putOnWater();
+    getBoat().startEngine();
+    getBait().putOnHook();
+    getFishingRod().moveUpTheAir();
+    Fish fish = getFishingRod().pullOutOfWater();
     return fish;
   }
 
